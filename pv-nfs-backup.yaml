@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-nfs-backup
+spec:
+  capacity:
+    storage: 1Gi 
+  accessModes:
+  - ReadWriteMany 
+  nfs: 
+    path: /backupcosta 
+    server: corp740.ti.sabesp.com.br 
+  persistentVolumeReclaimPolicy: Retain 
